@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+  --Softred: hsl(14, 88%, 65%);
+  /* gradient */
+  --Softviolet: hsl(273, 75%, 66%);
+  --Softblue: hsl(240, 73%, 65%);
+  /* text */
+  --Verydarkgrayishblue: hsl(237, 12%, 33%);
+  --Darkgrayishblue: hsl(240, 6%, 50%);
+
+  /* dividers */
+  -lightgrayishblue: hsl(240, 5%, 91%);
+}
+
+body {
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  height: 100vh;
+  margin: 10px 250px;
+
+  overflow: hidden;
+}
+.container {
+  max-width: 1000px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  border-radius: 20px;
+  /* overflow: hidden; */
+}
+.left-container {
+  width: 50%;
+  position: relative;
+}
+.pattern {
+  width: 900px;
+  height: 900px;
+  position: relative;
+  top: -285px;
+  left: -480px;
+}
+.left-container::before {
+  content: " ";
+  background: url(./images/illustration-woman-online-desktop.svg) no-repeat
+    center center/cover;
+  position: absolute;
+  top: 50px;
+  left: -80px;
+  width: 490px;
+  height: 373px;
+  z-index: 1;
+}
+.right-container {
+  align-self: center;
+  width: 50%;
+}
