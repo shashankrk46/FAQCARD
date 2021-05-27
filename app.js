@@ -6,10 +6,18 @@ const arrLoop = arr.forEach(e => {
 
 function showAnswer(e) {
   const mainBox = e.target.parentElement.parentElement;
+  const arrow = e.target;
+
+  const heading = mainBox.querySelector(".question");
+
   const para = mainBox.querySelector(".answer");
   if (para.style.display === "block") {
-    return (para.style.display = "none");
+    para.style.display = "none";
+    heading.style.color = "hsl(240, 6%, 50%)";
+    arrow.style.transform = "rotate(0deg)";
   } else {
-    return (para.style.display = "block");
+    para.style.display = "block";
+    heading.style.color = "hsl(237, 12%,33%)";
+    arrow.style.transform = "rotate(180deg)";
   }
 }
