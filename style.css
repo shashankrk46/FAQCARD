@@ -16,7 +16,7 @@
   --Darkgrayishblue: hsl(240, 6%, 50%);
 
   /* dividers */
-  -lightgrayishblue: hsl(240, 5%, 91%);
+  --lightgrayishblue: hsl(240, 5%, 91%);
 }
 
 body {
@@ -38,10 +38,13 @@ body {
   background-color: white;
   display: flex;
   border-radius: 20px;
-  /* overflow: hidden; */
 }
 .left-container {
   width: 50%;
+  position: relative;
+}
+.big-image {
+  overflow: hidden;
   position: relative;
 }
 .pattern {
@@ -51,7 +54,7 @@ body {
   top: -285px;
   left: -480px;
 }
-.left-container::before {
+.big-image::before {
   content: " ";
   background: url(./images/illustration-woman-online-desktop.svg) no-repeat
     center center/cover;
@@ -62,7 +65,58 @@ body {
   height: 373px;
   z-index: 1;
 }
+.left-container::after {
+  content: " ";
+  background: url(./images/illustration-box-desktop.svg) no-repeat center
+    center/cover;
+  position: absolute;
+  top: 185px;
+  left: -98px;
+  width: 200px;
+  height: 200px;
+  z-index: 10;
+}
 .right-container {
-  align-self: center;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  margin: 70px 20px;
+}
+.wrapper h2 {
+  font-size: 26px;
+}
+.qanda {
+  margin-top: 25px;
+  width: 390px;
+}
+
+.questions {
+  display: flex;
+  justify-content: space-between;
+}
+.questions p {
+  font-size: 15px;
+
+  color: var(--Darkgrayishblue);
+}
+.box {
+  border-bottom: 1px solid var(--lightgrayishblue);
+  padding: 20px 0px;
+}
+.arrow {
+  width: 10px;
+  height: 8px;
+
+  margin-right: 15px;
+}
+.answer {
+  display: none;
+  margin: 10px 0px 0px 0px;
+  color: var(--Darkgrayishblue);
+  font-size: 13px;
+
+  line-height: 1.4;
 }
