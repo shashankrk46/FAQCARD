@@ -148,7 +148,7 @@ body {
     position: relative;
   }
   .left-container {
-    width: 0%;
+    width: 0;
     height: 0;
   }
   .pattern {
@@ -193,6 +193,10 @@ body {
   .qanda {
     margin-top: 10px;
     width: 320px;
+  }
+  .wrapper {
+    margin: 70px 20px;
+    overflow: hidden;
   }
   .wrapper h2 {
     font-size: 30px;
